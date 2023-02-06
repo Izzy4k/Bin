@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/eight"
+    android:backgroundTint="@color/white"
+    app:cardElevation="@dimen/zero"
+    app:strokeColor="@color/color_primary"
+    app:strokeWidth="@dimen/one">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/sixteen" />
+
+        <TextView
+            android:id="@+id/item_txt_bank_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twelve"
+            android:text="@string/bank"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/twenty_sp"
+            app:layout_constraintStart_toStartOf="@id/left_line"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_txt_data_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/twelve"
+            android:text="@string/date"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/twenty_sp"
+            app:layout_constraintBottom_toTopOf="@id/item_txt_time_search"
+            app:layout_constraintStart_toStartOf="@id/left_line"
+            app:layout_constraintTop_toBottomOf="@id/item_txt_bank_title" />
+
+        <TextView
+            android:id="@+id/item_txt_time_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/twelve"
+            android:text="@string/time"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/twenty_sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/left_line"
+            app:layout_constraintTop_toBottomOf="@id/item_txt_data_search" />
+
+
+        <Space
+            android:id="@+id/title_space"
+            android:layout_width="@dimen/twenty"
+            android:layout_height="@dimen/zero"
+            app:layout_constraintStart_toEndOf="@id/item_txt_bank_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_txt_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="casual"
+            android:lines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twenty_four_sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/item_txt_bank_title"
+            app:layout_constraintStart_toEndOf="@id/title_space"
+            tools:text="title" />
+
+        <TextView
+            android:id="@+id/item_txt_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:lines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twenty_sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/item_txt_data_search"
+            app:layout_constraintStart_toEndOf="@id/title_space"
+            tools:text="01.05.22" />
+
+        <TextView
+            android:id="@+id/item_txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:lines="1"
+            tools:text="21:28"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twenty_sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/item_txt_time_search"
+            app:layout_constraintStart_toEndOf="@id/title_space" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
